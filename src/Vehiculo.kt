@@ -17,6 +17,6 @@ abstract class Vehiculo(
     // endregion
 
     override fun toString(): String {
-        return "Velocidad: $velocidadActual km/h | Combustible: $combustible | Distancia: $distanciaRecorrida km"
+        return "Velocidad: $velocidadActual km/h | Combustible: $combustible | Distancia: $distanciaRecorrida m"
     }
 }

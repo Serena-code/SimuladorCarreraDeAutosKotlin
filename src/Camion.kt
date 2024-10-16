@@ -1,8 +1,8 @@
 class Camion(
     nombre: String,
-    velocidadMaxima: Int,
-    combustible: Int,
-    aceleracion: Int,
-    frenado: Int,
-):VehiculoCustom(nombre,90,150,5,8) {
+    velocidadMaxima: Int=90,
+    combustible: Int=150,
+    aceleracion: Int=5,
+    frenado: Int=8,
+):VehiculoCustom(nombre, velocidadMaxima, combustible, aceleracion, frenado) {
 }

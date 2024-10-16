@@ -23,7 +23,8 @@ open class VehiculoCustom(
     }
 
     override fun frenar() {
-        while(velocidadActual>0){
+        while(velocidadActual>frenado){
+
             velocidadActual-= frenado
         }
         println("Nueva velocidad: ${velocidadActual}")

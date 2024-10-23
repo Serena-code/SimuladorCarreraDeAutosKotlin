@@ -1,4 +1,4 @@
-# Simulador de Carrera de Autos
+# Simulador de Carrera de Autos OK
 
 ## Objetivo:
 - Implementar un simulador de carreras de autos por equipos usando **conceptos de POO**.
@@ -40,3 +40,35 @@
     - Combustible: 150
     - Aceleración: 5
     - Frenado: 8
+
+## Etapa 2
+
+### Clase PistaPersonalizada
+- Implementa la clase PistaPersonalizada(Con nombre del equipo), que representará la pista donde compiten los equipos y tendrá las siguientes características:
+clima: La pista permitirá los siguientes tipos de clima: "soleado", "lluvia", "niebla" y "normal".
+#### Métodos:
+- `aplicarCondiciones(vehiculo: Vehiculo)`: Este método aplicará condiciones climáticas al vehículo, afectando su rendimiento de acuerdo al clima actual:
+  - Si está **lloviendo**, la velocidad actual del vehículo disminuye un 50%. 
+  - Si hay **niebla**, la velocidad actual disminuye un 80%. 
+  - Si está **soleado**, el vehículo consume un 5% adicional de combustible.
+  
+- `cambiarClima()`: Cambia el clima de manera aleatoria utilizando la clase Random. permitiendo condiciones climáticas cambiantes durante la carrera.
+
+- `aplicarEventoAleatorio(vehiculo: Vehiculo)`: Aplica eventos aleatorios al vehículo. Los eventos posibles son:
+  - **Pinchazo**: El vehículo frena. 
+  - **Fallo mecánico**: El vehículo se detiene por completo. 
+  - **Encontrar combustible**: Aumenta el nivel de combustible en un 20%, teniendo en cuenta que el tanque tiene una capacidad máxima limitada.
+  
+### Función Main
+En el método Main, deberás implementar las funcionalidades pendientes:
+#### Instanciar
+- La pista custom
+- 3 Vehículos de los distintos tipos
+
+#### Pista
+- Aplicar condiciones climáticas a los vehículos en la pista
+- Aplicar eventos aleatorios, que afectar el rendimiento de los vehículos.
+
+#### Acciones del vehículo:
+El vehículo debe acelerar y avanzar en la pista mientras se le aplican las condiciones climáticas y los eventos aleatorios.
+Esta estructura permite simular una carrera dinámica, donde tanto el clima como los eventos fortuitos afectan el desempeño de los vehículos, creando una experiencia impredecible y desafiante.

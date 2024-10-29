@@ -20,7 +20,7 @@ fun main() {
     autodeportivo.frenar()
     println(autodeportivo.toString())
 
-    val pista = Pista(100, "soleado")
+    val pista = PistaPersonalizadaTunipandilla(100, "soleado")
     //TODO instanciar Pista Custom
     //TODO Instanciar los distintos vehiculos
     val vehiculos: List<Vehiculo> = listOf()

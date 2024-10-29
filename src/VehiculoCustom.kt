@@ -8,23 +8,17 @@ open class VehiculoCustom(
 
     override fun acelerar() {
         if (combustible>0) {
-            while (velocidadActual <= velocidadMaxima) {
-                if (combustible > 0) {
-                    velocidadActual += aceleracion
-                    combustible -= 1
-                } else {
-                    break
+            if (velocidadActual <= velocidadMaxima) {
+                velocidadActual += aceleracion
+                combustible -= 1
                 }
-
-            }
         }else{
             println("No posee más combustible")
         }
     }
 
     override fun frenar() {
-        while(velocidadActual>frenado){
-
+        if (velocidadActual>frenado){
             velocidadActual-= frenado
         }
         println("Nueva velocidad: ${velocidadActual}")

@@ -5,25 +5,14 @@ fun main() {
     val moto = Moto("Honda")
     val autodeportivo = AutoDeportivo ("Ferrari")
 
-    moto.avanzar()
-    moto.acelerar()
-    moto.frenar()
-    println (moto.toString())
 
-    camion.avanzar()
-    camion.acelerar()
-    camion.frenar()
+    println(autodeportivo.toString())
+    println(moto.toString())
     println(camion.toString())
 
-    autodeportivo.avanzar()
-    autodeportivo.acelerar()
-    autodeportivo.frenar()
-    println(autodeportivo.toString())
+    val pista = PistaPersonalizadaTunipandilla(300, "soleado")
 
-    val pista = PistaPersonalizadaTunipandilla(100, "soleado")
-    //TODO instanciar Pista Custom
-    //TODO Instanciar los distintos vehiculos
-    val vehiculos: List<Vehiculo> = listOf()
+    val vehiculos: List<Vehiculo> = listOf(camion, moto, autodeportivo)
 
     var ganador: Vehiculo? = null
     var turnos = 0
@@ -40,8 +29,9 @@ fun main() {
 
         // Simulación de la carrera
         vehiculos.forEach { vehiculo ->
-            //TODO: Completar metodos
 
+            vehiculo.acelerar()
+            vehiculo.avanzar()
             if (vehiculo.distanciaRecorrida >= pista.longitud) {
                 ganador = vehiculo
             }
